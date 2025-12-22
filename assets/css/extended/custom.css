@@ -124,6 +124,29 @@ hr {
     margin-bottom: 1.5rem;
 }
 
+/* This targets any <ul> that lives inside a .project-item */
+.project-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+.project-item li {
+  margin-bottom: 8px;
+}
+
+.project-item li a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    word-break: break-all; /* Prevents long URLs from breaking the layout on mobile */
+}
+
+.project-item li a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
 .project-item h3 {
     font-size: 1.1rem;
     font-weight: 600;
@@ -149,6 +172,12 @@ hr {
 .project-item p {
     margin: 0;
     color: var(--secondary);
+
+}
+
+.project-item li strong {
+    color: var(--primary); /* Or your main text color */
+    font-weight: 600;
 }
 
 /* Publications */

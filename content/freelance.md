@@ -2,12 +2,23 @@
 title: "Freelance"
 ---
 
-<div class="project-item">
-<h3>Web Design</h3>
-<p>Custom websites for small businesses and personal clients (WordPress, HTML/CSS, JavaScript).</p>
-</div>
 
 <div class="project-item">
-<h3>Operations Consulting</h3>
-<p>Streamlined operational processes and workflows for [Club Name].</p>
+  <h3>Telegram Bottle Management System</h3>
+  <p>Engineered an automated workflow to streamline operational processes for Rabbit Hole, significantly improving internal efficiency via Telegram API integration.</p>
+</div> 
+
+<div class="project-item">
+  <h3>Product Launch Landing Page</h3>
+  <p>Developed a high-conversion, "rebellious" aesthetic landing page using Tailwind CSS. Integrated Stripe API for secure, seamless payment processing.</p>
+</div> 
+
+<div class="project-item">
+  <h3>Enterprise WordPress Development & Maintenance</h3>
+  <p>Lead developer for high-traffic organizational websites, focusing on security, performance optimization, and UI/UX consistency.</p>
+  <ul class="project-list">
+    <li><strong> <a href="http://sata.com.sg/" target="_blank">SATA CommHealth (2025)</a></strong></li>
+    <li><strong> <a href="https://www.tptc.org.sg/" target="_blank">Tanjong Pagar Town Council (2025)</a></strong></li>
+  </ul>
 </div>
+
