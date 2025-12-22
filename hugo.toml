@@ -1,0 +1,60 @@
+baseURL = "https://dhecloud.github.io/"
+languageCode = "en-us"
+title = "Andrew Koh"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Fix for the "paginate" deprecation error
+[pagination]
+  pagerSize = 5
+
+[params]
+  env = "production"
+  title = "Andrew Koh"
+  description = "Machine Learning Engineer — NLP & Audio AI"
+  author = "Andrew Koh"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  disableSpecial1stPost = true
+  hideSummary = false
+  profileImage = "/images/profile.jpeg"
+
+
+  # Disable profile mode - we use custom homepage
+  [params.profileMode]
+    enabled = false
+
+  [params.homeInfoParams]
+    enabled = false
+
+  # Corrected Social Icons: Removed the [params.socialIcons] header
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/dhecloud"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:andrewkjj@gmail.com"
+
+# No menu - single page
+[menu]
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true

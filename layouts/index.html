@@ -1,0 +1,72 @@
+{{ define "main" }}
+<div class="home-content">
+    <!-- Header -->
+    <header class="home-header">
+        <h1>{{ .Site.Title }}</h1>
+        
+        {{ if .Site.Params.profileImage }}
+        <div class="profile-img">
+            <img src="{{ .Site.Params.profileImage }}" alt="{{ .Site.Title }}">
+        </div>
+        {{ end }}
+        
+        <div class="social-icons">
+            {{- range .Site.Params.socialIcons }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
+                {{- partial "svg.html" . -}}
+            </a>
+            {{- end }}
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="home-section">
+        {{ .Content }}
+    </section>
+
+    <hr>
+
+    <!-- Projects Section -->
+    {{ with .Site.GetPage "/projects" }}
+    <section class="home-section">
+        <h2>Projects</h2>
+        {{ .Content }}
+    </section>
+    {{ end }}
+
+    <hr>
+
+    <!-- Blog Section -->
+    <section class="home-section">
+        <h2>Blog</h2>
+        <ul class="post-list">
+            {{- range (where .Site.RegularPages "Section" "blog") }}
+            <li>
+                <a href="{{ .Permalink }}"><strong>{{ .Params.emoji }} {{ .Title }}</strong></a>
+                {{ with .Params.summary }}<br><span class="post-summary">{{ . }}</span>{{ end }}
+            </li>
+            {{- end }}
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Publications Section -->
+    {{ with .Site.GetPage "/publications" }}
+    <section class="home-section">
+        <h2>Publications</h2>
+        {{ .Content }}
+    </section>
+    {{ end }}
+    <hr>
+
+    <!-- Freelance Section -->
+    {{ with .Site.GetPage "/freelance" }}
+    <section class="home-section">
+        <h2>Other Work</h2>
+        {{ .Content }}
+    </section>
+    {{ end }}
+
+</div>
+{{ end }}
