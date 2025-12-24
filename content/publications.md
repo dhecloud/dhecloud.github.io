@@ -15,11 +15,11 @@ A. Koh, S. Tiwari, C. E. Siong — APSIPA ASC 2022 — <a href="https://doi.org/
 </div>
 
 <div class="publication">
-<em>Automated audio captioning using transfer learning and reconstruction latent space similarity regularization</em><br>
+<em><a href='/blog/the-hidden-struggles-of-my-first-doctoral-paper/'>Automated audio captioning using transfer learning and reconstruction latent space similarity regularization</a></em><br>
 A. Koh, X. Fuzhao, C. E. Siong — ICASSP 2022 — <a href="https://doi.org/10.1109/ICASSP43922.2022.9747676">DOI</a>
 </div>
 
 <div class="publication">
 <em>Adapting BERT for word sense disambiguation with gloss selection objective and example sentences</em><br>
-B. P. Yap, A. Koh, E. S. Chng — EMNLP 2020 Findings — <a href="https://aclanthology.org/2020.findings-emnlp.4">ACL Anthology</a>
+B. P. Yap, A. Koh, E. S. Chng — EMNLP 2020 Findings — <a href="https://aclanthology.org/2020.findings-emnlp.4">ACL</a>
 </div>

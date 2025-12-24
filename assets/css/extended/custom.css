@@ -186,7 +186,7 @@ hr {
 }
 
 .publication a {
-    color: #B45309; /* Deep Teal */
+    color: #B45309;/
     text-decoration: none;
 }
 
@@ -197,6 +197,17 @@ hr {
 
 .publication em {
     font-style: italic;
+}
+
+.publication em a {
+    color: #0d9488; /* Deep Teal */
+    text-decoration: none;
+    font-style: italic;
+}
+
+.publication a:hover {
+    color: #0f766e;
+    text-decoration: underline;
 }
 
 /* Footer override - minimal */
