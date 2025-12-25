@@ -21,6 +21,9 @@ Three years ago, right after I passed my doctoral Qualifying Exam in 2022, Natur
 
 At that time, my advisor was working in Audio Processing; a field which, at the time, had mostly yet to catch up with the impressive progress of its sister fields. He introduced me to Automated Audio Captioning, a relatively new task that had been introduced in the [DCASE](https://dcase.community/challenge2021/index) challenge.
 
+{{< figure src="task6_aac_system_example.png" class="align-center" caption="Automated Audio captioning in a nutshell. [Source](https://dcase.community/challenge2024/task-automated-audio-captioning)" alt="automated audio captioning">}}
+
+
 Audio captioning appealed to me because it sat at the intersection of multiple domains: audio signal processing, representation learning, and text generation. Compared to speech recognition, it felt less “solved” and more open-ended. The model wasn’t just mapping sound to words; it was trying to describe a scene. Furthermore, as a hearing-impaired individual, focusing on this research felt personal and meaningful.
 
 Transfer learning had just become the de facto method for training models. Every month, larger foundation models were released. In vision and NLP, pretrained models were already standard, but in audio, the field still felt underexplored. I wanted to see how far we could go by reusing strong audio representations instead of learning everything from scratch.
@@ -40,6 +43,10 @@ Very quickly, progress became less about “big ideas” and more about careful 
 
 At the time, there were two lines of research that I believed had potential: [Adapter layers](https://arxiv.org/abs/1902.00751) and more meaningful loss functions. With these in mind, I tried reframing the task as maximizing the similarity between intermediate text and audio embeddings using a small set of parameters. Additionally, because I was severely constrained by compute, I decided my research would have a "low-compute" angle.
 
+
+{{< figure src="gpu.png" class="align-center" caption="" alt="where?" >}}
+
+
 The paper ended up with two main components:
  1. Transfer learning from pretrained audio models to get better acoustic features.
  2. Reconstruction Latent Space Similarity Regularization (RLSSR), a small set of layers that encouraged consistency in the latent space when reconstructing audio features, with the aim of guiding the model toward more meaningful representations.
@@ -52,9 +59,19 @@ On paper, this sounds straightforward. In practice, it meant a lot of parameter 
  - where in the network to apply it,
  - and how to balance it against the captioning loss.
 
-Most of this was decided empirically. Sometimes, changing a particular hyperparameter would improve results across a few experiments, only for that improvement to disappear when something else changed. It felt like hitting a jackpot; you had to stumble upon the exact right combination to get consistent results.
+
+
+{{< figure src="gamblingaddict.jpg" class="align-center" caption="How it feels like doing hyperparameter grid search" alt="How it feels like doing hyperparameter grid search" >}}
+
+Most of this was decided empirically. Sometimes, changing a particular hyperparameter would improve results across a few experiments, only for that improvement to disappear when something else changed. It felt like hitting a jackpot; you had to stumble upon the exact right combination to get 
+consistent results.
+
 
 ## What Was Actually Hard
+
+
+{{< figure src="dog-no-idea.png" class="align-center" caption="Is it the encoder? The decoder? The loss? The data? Yes." alt="Is it the encoder? The decoder? The loss? The data? Yes." >}}
+
 
 1. Knowing what to trust  
     Metrics like BLEU, METEOR, CIDEr would increase, but qualitative outputs did not always look clearly better. I often found myself manually reading captions and wondering whether the improvement was real or just metric noise. Should I posit that these metrics from machine translation are unsuitable? Would anyone even take me seriously?
