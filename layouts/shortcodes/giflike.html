@@ -1,0 +1,15 @@
+{{ $width := .Get "width" | default "80%" }}
+
+<div style="text-align: center;">
+  <figure style="display: inline-block; text-align: center;">
+    <video autoplay loop muted playsinline loading="lazy"
+           style="width: {{ $width }}; height: auto;">
+      <source src="{{ .Get "src" }}" type="video/mp4">
+    </video>
+    {{ with .Get "caption" }}
+    <figcaption style="margin-top: 8px; font-size: 0.9em; color: #666;">
+      {{ . }}
+    </figcaption>
+    {{ end }}
+  </figure>
+</div>

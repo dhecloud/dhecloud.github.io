@@ -3,12 +3,12 @@ title: "Projects"
 ---
 
 <div class="project-item">
-<h3> <a href="https://your-link-here.com">SakuraSensei: Japanese Conversational AI Tutor (2025)</a></h3>
+<h3> SakuraSensei: Japanese Conversational AI Tutor (2025)</h3>
 <p>Context-aware Japanese Telegram bot with LangChain, custom persona, memory persistence, multi-dataset RAG (JLPT, JMDICT, Tatoeba, JaSquad), multi-agent news explanation, cloze-question generation from YouTube via Whisper + VAD.</p>
 </div>
 
 <div class="project-item">
-<h3>FaceChangerGIFBot: Face Swap for GIFs and Clips (2025)</h3>
+<h3><a href='/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/'>FaceChangerGIFBot: Face Swap for GIFs and Clips (2025)</a></h3>
 <p>Real-time face swap Telegram bot using ONNX inference. Stripe-integrated subscriptions, content moderation, Cloudflare Tunnel webhooks.</p>
 </div>
 

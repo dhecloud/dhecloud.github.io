@@ -15,7 +15,7 @@ A. Koh, S. Tiwari, C. E. Siong — APSIPA ASC 2022 — <a href="https://doi.org/
 </div>
 
 <div class="publication">
-<em><a href='/blog/the-hidden-struggles-of-my-first-doctoral-paper/'>Automated audio captioning using transfer learning and reconstruction latent space similarity regularization</a></em><br>
+<em><a href='/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/'>Automated audio captioning using transfer learning and reconstruction latent space similarity regularization</a></em><br>
 A. Koh, X. Fuzhao, C. E. Siong — ICASSP 2022 — <a href="https://doi.org/10.1109/ICASSP43922.2022.9747676">DOI</a>
 </div>
 
