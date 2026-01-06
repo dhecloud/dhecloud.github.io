@@ -4,7 +4,7 @@ title: "Freelance"
 
 
 <div class="project-item">
-  <h3>Telegram Bottle Management System</h3>
+  <h3><a href='http://t.me/rhbottlebot'>Telegram Bottle Management System</a></h3>
   <p>Engineered an automated workflow to streamline operational processes for Rabbit Hole, significantly improving internal efficiency via Telegram API integration.</p>
 </div> 
 

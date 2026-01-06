@@ -2,7 +2,7 @@
 title: "Building FaceChangerGIFBot: Reflections on Shipping a Side Project
 "
 date: 2025-11-18
-draft: True
+draft: False
 tags: ["Machine Learning", "Computer Vision", "Side Project"]
 summary: "What started as a joke about my friend became a lesson in product thinking, user behavior, and the quiet satisfaction of finishing something"
 ---

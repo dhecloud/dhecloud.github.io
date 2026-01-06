@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Andrew Koh</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Andrew Koh</description>
+    <generator>Hugo -- 0.153.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building FaceChangerGIFBot: Reflections on Shipping a Side Project </title>
+      <link>http://localhost:1313/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/</guid>
+      <description>What started as a joke about my friend became a lesson in product thinking, user behavior, and the quiet satisfaction of finishing something</description>
+    </item>
+    <item>
+      <title>The Hidden Struggles of My First Doctoral Paper </title>
+      <link>http://localhost:1313/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/</guid>
+      <description>A reflective look back at my first published paper at ICASSP 2022. The post moves beyond technical results to discuss the realities of PhD life: GPU shortages, the shift from architecture design to empirical iteration, and the personal motivation behind researching audio tools as a hearing-impaired individual.</description>
+    </item>
+    <item>
+      <title>Freelance</title>
+      <link>http://localhost:1313/freelance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/freelance/</guid>
+      <description>&lt;div class=&#34;project-item&#34;&gt;
+  &lt;h3&gt;Telegram Bottle Management System&lt;/h3&gt;
+  &lt;p&gt;Engineered an automated workflow to streamline operational processes for Rabbit Hole, significantly improving internal efficiency via Telegram API integration.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div class=&#34;project-item&#34;&gt;
+  &lt;h3&gt;Product Launch Landing Page&lt;/h3&gt;
+  &lt;p&gt;Developed a high-conversion, &#34;rebellious&#34; aesthetic landing page using Tailwind CSS. Integrated Stripe API for secure, seamless payment processing.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div class=&#34;project-item&#34;&gt;
+  &lt;h3&gt;Enterprise WordPress Development &amp; Maintenance&lt;/h3&gt;
+  &lt;p&gt;Lead developer for high-traffic organizational websites, focusing on security, performance optimization, and UI/UX consistency.&lt;/p&gt;
+  &lt;ul class=&#34;project-list&#34;&gt;
+    &lt;li&gt;&lt;strong&gt; &lt;a href=&#34;http://sata.com.sg/&#34; target=&#34;_blank&#34;&gt;SATA CommHealth (2025)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt; &lt;a href=&#34;https://www.tptc.org.sg/&#34; target=&#34;_blank&#34;&gt;Tanjong Pagar Town Council (2025)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;div class=&#34;project-item&#34;&gt;
+&lt;h3&gt; SakuraSensei: Japanese Conversational AI Tutor (2025)&lt;/h3&gt;
+&lt;p&gt;Context-aware Japanese Telegram bot with LangChain, custom persona, memory persistence, multi-dataset RAG (JLPT, JMDICT, Tatoeba, JaSquad), multi-agent news explanation, cloze-question generation from YouTube via Whisper + VAD.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;project-item&#34;&gt;
+&lt;h3&gt;&lt;a href=&#39;http://localhost:1313/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/&#39;&gt;FaceChangerGIFBot: Face Swap for GIFs and Clips (2025)&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Real-time face swap Telegram bot using ONNX inference. Stripe-integrated subscriptions, content moderation, Cloudflare Tunnel webhooks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;project-item&#34;&gt;
+&lt;h3&gt;Acoustic Event Detection for Emergency Telephony (2023–2024)&lt;/h3&gt;
+&lt;p&gt;Streaming audio event-detection with custom PyTorch model. Nine acoustic classes, log-mel extraction, VAD, caption generation (SRT/XML/JSON), Dockerized deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/</guid>
+      <description>&lt;p&gt;Full list on &lt;a href=&#34;https://scholar.google.com/citations?user=YOUR_ID&#34;&gt;Google Scholar&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;publication&#34;&gt;
+&lt;em&gt;Language-based audio retrieval with converging tied layers and contrastive loss&lt;/em&gt;&lt;br&gt;
+A. Koh, C. E. Siong — APSIPA ASC 2022 — &lt;a href=&#34;https://doi.org/10.23919/APSIPAASC55919.2022.9979840&#34;&gt;DOI&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication&#34;&gt;
+&lt;em&gt;Automated audio captioning with epochal difficult captions for curriculum learning&lt;/em&gt;&lt;br&gt;
+A. Koh, S. Tiwari, C. E. Siong — APSIPA ASC 2022 — &lt;a href=&#34;https://doi.org/10.23919/APSIPAASC55919.2022.9980242&#34;&gt;DOI&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication&#34;&gt;
+&lt;em&gt;&lt;a href=&#39;http://localhost:1313/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/&#39;&gt;Automated audio captioning using transfer learning and reconstruction latent space similarity regularization&lt;/a&gt;&lt;/em&gt;&lt;br&gt;
+A. Koh, X. Fuzhao, C. E. Siong — ICASSP 2022 — &lt;a href=&#34;https://doi.org/10.1109/ICASSP43922.2022.9747676&#34;&gt;DOI&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&#34;publication&#34;&gt;
+&lt;em&gt;Adapting BERT for word sense disambiguation with gloss selection objective and example sentences&lt;/em&gt;&lt;br&gt;
+B. P. Yap, A. Koh, E. S. Chng — EMNLP 2020 Findings — &lt;a href=&#34;https://aclanthology.org/2020.findings-emnlp.4&#34;&gt;ACL&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

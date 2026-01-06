@@ -3,10 +3,11 @@ title: "The Hidden Struggles of My First Doctoral Paper
 "
 date: 2025-11-12
 draft: False
-tags: ["Machine Learning", "Automated Audio Captioning"]
+tags: ["Machine Learning", "Automated Audio Captioning", "PhD"]
 summary: "A reflective look back at my first published paper at ICASSP 2022. The post moves beyond technical results to discuss the realities of PhD life: GPU shortages, the shift from architecture design to empirical iteration, and the personal motivation behind researching audio tools as a hearing-impaired individual."
 ---
 
+[Paper](https://arxiv.org/abs/2108.04692)
 
 My very first paper, [Automated Audio Captioning using Transfer Learning and Reconstruction Latent Space Similarity Regularization](https://arxiv.org/abs/2108.04692), was published at [ICASSP 2022](https://2022.ieeeicassp.org/) during my doctorate. At the time, I was idealistic and optimistic about many research directions; I wanted to publish something novel and exciting. Now, looking back, what stands out more are the struggles, the wrong turns, and how my thinking evolved.
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Automated Audio Captioning on Andrew Koh</title>
+    <link>http://localhost:1313/tags/automated-audio-captioning/</link>
+    <description>Recent content in Automated Audio Captioning on Andrew Koh</description>
+    <generator>Hugo -- 0.153.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/automated-audio-captioning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Hidden Struggles of My First Doctoral Paper </title>
+      <link>http://localhost:1313/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/</guid>
+      <description>A reflective look back at my first published paper at ICASSP 2022. The post moves beyond technical results to discuss the realities of PhD life: GPU shortages, the shift from architecture design to empirical iteration, and the personal motivation behind researching audio tools as a hearing-impaired individual.</description>
+    </item>
+  </channel>
+</rss>
