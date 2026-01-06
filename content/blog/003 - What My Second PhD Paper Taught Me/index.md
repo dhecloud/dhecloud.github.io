@@ -2,7 +2,7 @@
 title: "What my Second PhD Paper Taught Me
 "
 date: 2025-11-25
-draft: True
+draft: False
 tags: ["Machine Learning", "Automated Audio Captioning", "PhD"]
 summary: "A personal reflection on an APSIPA paper, focusing on the pressures, constraints, and lessons that shaped the work beyond what appeared in the final publication."
 ---
