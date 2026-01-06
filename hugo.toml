@@ -36,6 +36,10 @@ buildExpired = false
   [params.homeInfoParams]
     enabled = false
 
+  # Google Analytics
+  [params.analytics.google]
+    id = "G-VZWZWMSWQQ"  # Replace with your Google Analytics 4 Measurement ID
+
   # Corrected Social Icons: Removed the [params.socialIcons] header
   [[params.socialIcons]]
     name = "github"
