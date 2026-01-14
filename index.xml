@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Andrew Koh</title><link>https://dhecloud.xyz/</link><description>Recent content on Andrew Koh</description><generator>Hugo -- 0.146.0</generator><language>en-us</language><lastBuildDate>Fri, 12 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dhecloud.xyz/index.xml" rel="self" type="application/rss+xml"/><item><title>Telegram Bottle Management System</title><link>https://dhecloud.xyz/notes/telegram-bottle-system/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/notes/telegram-bottle-system/</guid><description>&lt;p>&lt;a href="http://t.me/rhbottlebot">Link to Bot&lt;/a>&lt;/p>
+&lt;p>A production-ready inventory management system built to track stored customer items through Telegram. The bot provides staff with an intuitive Telegram interface for managing item storage, retrieval, and expiration tracking, while automatically notifying customers through WhatsApp when their items are stored or ready for collection.&lt;/p>
+&lt;p>The system combines the convenience of Telegram&amp;rsquo;s messaging platform for internal operations with WhatsApp Business API for customer-facing communications, backed by cloud-based spreadsheet storage for data persistence and accessibility.&lt;/p></description></item><item><title>Building SakuraSensei: Notes From a Japanese Learning Experiment</title><link>https://dhecloud.xyz/blog/004---building-sakurasensei-notes-from-a-japanese-learning-experiment/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/blog/004---building-sakurasensei-notes-from-a-japanese-learning-experiment/</guid><description>What started as a joke about my friend became a lesson in product thinking, user behavior, and the quiet satisfaction of finishing something</description></item><item><title>What my Second PhD Paper Taught Me</title><link>https://dhecloud.xyz/blog/003---what-my-second-phd-paper-taught-me/</link><pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/blog/003---what-my-second-phd-paper-taught-me/</guid><description>A personal reflection on an APSIPA paper, focusing on the pressures, constraints, and lessons that shaped the work beyond what appeared in the final publication.</description></item><item><title>Building FaceChangerGIFBot: Reflections on Shipping a Side Project</title><link>https://dhecloud.xyz/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/</link><pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/</guid><description>What started as a joke about my friend became a lesson in product thinking, user behavior, and the quiet satisfaction of finishing something</description></item><item><title>The Hidden Struggles of My First Doctoral Paper</title><link>https://dhecloud.xyz/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/</link><pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/</guid><description>A reflective look back at my first published paper at ICASSP 2022. The post moves beyond technical results to discuss the realities of PhD life: GPU shortages, the shift from architecture design to empirical iteration, and the personal motivation behind researching audio tools as a hearing-impaired individual.</description></item><item><title>title</title><link>https://dhecloud.xyz/notes/template/</link><pubDate>Tue, 09 Jan 2024 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/notes/template/</guid><description>&lt;p>[Add your description]&lt;/p>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;h2 id="technologies-used">Technologies Used&lt;/h2>
+&lt;h2 id="key-features">Key Features&lt;/h2></description></item><item><title>Freelance</title><link>https://dhecloud.xyz/freelance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/freelance/</guid><description>&lt;div class="project-item">
+&lt;h3>&lt;a href='https://dhecloud.xyz/notes/telegram-bottle-system/'>Telegram Bottle Management System&lt;/a>&lt;/h3>
+&lt;p>Engineered an automated workflow to streamline operational processes for Rabbit Hole, significantly improving internal efficiency via Telegram API integration.&lt;/p>
+&lt;/div>
+&lt;div class="project-item">
+&lt;h3>Product Launch Landing Page&lt;/h3>
+&lt;p>Developed a high-conversion, "rebellious" aesthetic landing page using Tailwind CSS. Integrated Stripe API for secure, seamless payment processing.&lt;/p>
+&lt;/div>
+&lt;div class="project-item">
+&lt;h3>Enterprise WordPress Development &amp; Maintenance&lt;/h3>
+&lt;p>Lead developer for high-traffic organizational websites, focusing on security, performance optimization, and UI/UX consistency.&lt;/p>
+&lt;ul class="project-list">
+&lt;li>&lt;strong> &lt;a href="http://sata.com.sg/" target="_blank">SATA CommHealth (2025)&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong> &lt;a href="https://www.tptc.org.sg/" target="_blank">Tanjong Pagar Town Council (2025)&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/div></description></item><item><title>Projects</title><link>https://dhecloud.xyz/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/projects/</guid><description>&lt;div class="project-item">
+&lt;h3> &lt;a href="https://dhecloud.xyz/blog/004---building-sakurasensei-notes-from-a-japanese-learning-experiment/">SakuraSensei: Japanese Conversational AI Tutor (2025)&lt;/a>&lt;/h3>
+&lt;p>Context-aware Japanese Telegram bot with LangChain, custom persona, memory persistence, multi-dataset RAG (JLPT, JMDICT, Tatoeba, JaSquad), multi-agent news explanation, cloze-question generation from YouTube via Whisper + VAD.&lt;/p>
+&lt;/div>
+&lt;div class="project-item">
+&lt;h3>&lt;a href='https://dhecloud.xyz/blog/002---building-facechangergifbot---reflections-on-shipping-a-side-project/'>FaceChangerGIFBot: Face Swap for GIFs and Clips (2025)&lt;/a>&lt;/h3>
+&lt;p>Real-time face swap Telegram bot using ONNX inference. Stripe-integrated subscriptions, content moderation, Cloudflare Tunnel webhooks.&lt;/p>
+&lt;/div>
+&lt;div class="project-item">
+&lt;h3>Acoustic Event Detection for Emergency Telephony (2023–2024)&lt;/h3>
+&lt;p>Streaming audio event-detection with custom PyTorch model. Nine acoustic classes, log-mel extraction, VAD, caption generation (SRT/XML/JSON), Dockerized deployment.&lt;/p></description></item><item><title>Publications</title><link>https://dhecloud.xyz/publications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dhecloud.xyz/publications/</guid><description>&lt;p>Full list on &lt;a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar&lt;/a>.&lt;/p>
+&lt;div class="publication">
+&lt;em>Language-based audio retrieval with converging tied layers and contrastive loss&lt;/em>&lt;br>
+A. Koh, C. E. Siong — APSIPA ASC 2022 — &lt;a href="https://doi.org/10.23919/APSIPAASC55919.2022.9979840">DOI&lt;/a>
+&lt;/div>
+&lt;div class="publication">
+&lt;em>&lt;a href='https://dhecloud.xyz/blog/003---what-my-second-phd-paper-taught-me/
+'>Automated audio captioning with epochal difficult captions for curriculum learning&lt;/a>&lt;/em>&lt;br>
+A. Koh, S. Tiwari, C. E. Siong — APSIPA ASC 2022 — &lt;a href="https://doi.org/10.23919/APSIPAASC55919.2022.9980242">DOI&lt;/a>
+&lt;/div>
+&lt;div class="publication">
+&lt;em>&lt;a href='https://dhecloud.xyz/blog/001---the-hidden-struggles-of-my-first-doctoral-paper/'>Automated audio captioning using transfer learning and reconstruction latent space similarity regularization&lt;/a>&lt;/em>&lt;br>
+A. Koh, X. Fuzhao, C. E. Siong — ICASSP 2022 — &lt;a href="https://doi.org/10.1109/ICASSP43922.2022.9747676">DOI&lt;/a>
+&lt;/div>
+&lt;div class="publication">
+&lt;em>Adapting BERT for word sense disambiguation with gloss selection objective and example sentences&lt;/em>&lt;br>
+B. P. Yap, A. Koh, E. S. Chng — EMNLP 2020 Findings — &lt;a href="https://aclanthology.org/2020.findings-emnlp.4">ACL&lt;/a>
+&lt;/div></description></item></channel></rss>
