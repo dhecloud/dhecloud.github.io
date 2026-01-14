@@ -3,7 +3,7 @@ title: "Projects"
 ---
 
 <div class="project-item">
-<h3> SakuraSensei: Japanese Conversational AI Tutor (2025)</h3>
+<h3> <a href="/blog/004---building-sakurasensei-notes-from-a-japanese-learning-experiment/">SakuraSensei: Japanese Conversational AI Tutor (2025)</a></h3>
 <p>Context-aware Japanese Telegram bot with LangChain, custom persona, memory persistence, multi-dataset RAG (JLPT, JMDICT, Tatoeba, JaSquad), multi-agent news explanation, cloze-question generation from YouTube via Whisper + VAD.</p>
 </div>
 
