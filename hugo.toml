@@ -1,7 +1,7 @@
 baseURL = "https://dhecloud.xyz/"
 languageCode = "en-us"
 title = "Andrew Koh"
-theme = "PaperMod"
+theme = "congo"
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -16,8 +16,10 @@ buildExpired = false
   env = "production"
   title = "Andrew Koh"
   description = "Machine Learning Engineer — NLP & Audio AI"
-  author = "Andrew Koh"
   defaultTheme = "auto"
+
+[params.author]
+  name = "Andrew Koh"
   disableThemeToggle = false
   ShowReadingTime = true
   ShowShareButtons = false
