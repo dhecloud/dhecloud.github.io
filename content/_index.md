@@ -1,7 +1,8 @@
 ---
 title: "Andrew Koh"
+layout: "profile"
+
 ---
 
-I am a Machine Learning Engineer and Researcher with a Ph.D. in Computer Science from [Nanyang Technological University](https://www.ntu.edu.sg/), Singapore, specializing in audio and language understanding. While my primary focus has been leveraging deep learning to build cross-modal systems for audio captioning, retrieval, and acoustic scene analysis, I maintain a broad interest in the wider AI landscape, staying current with research in computer vision, generative modeling, and reinforcement learning to bring a versatile perspective to my work.
 
-Alongside research, I enjoy building applied AI products end-to-end. I also take on independent and freelance engineering work, including web development and automation tools for small teams and businesses. I enjoy the challenge of identifying a gap and building the end-to-end product needed to fill it, making sure the final tool is as useful as it is technically sound.
+Ph.D. in Computer Science (NTU Singapore) and ML Researcher specializing in the intersection of audio and language. When I'm not training cross-modal models or exploring the latest in generative AI, I'm building end-to-end products and automation tools for businesses. I write here about the bridge between academic research and practical, applied engineering.
