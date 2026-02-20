@@ -1,0 +1,226 @@
+/* Single-page portfolio styles */
+
+.home-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+.home-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.contact {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.profile-img {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary);
+    transition: fill 0.2s;
+}
+
+.social-icons a:hover svg {
+    fill: var(--primary);
+}
+
+/* Sections */
+.home-section {
+    margin: 2rem 0;
+}
+
+.home-section h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.home-section p {
+    margin-bottom: 1rem;
+}
+
+/* Specifically target links inside paragraphs to differentiate from titles */
+.home-section p a {
+    color: #2563eb;          /* Professional Blue */
+    text-decoration: none;   /* Cleaner look */
+    transition: all 0.2s ease;
+}
+
+.home-section p a:hover {
+    color: #1d4ed8;
+    border-bottom: 1px solid #1d4ed8; /* Sharper underline on hover */
+    background-color: rgba(37, 99, 235, 0.05); /* Very light highlight */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+}
+
+/* Post list (blog entries on homepage) */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-list li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.post-list a {
+    text-decoration: none;
+}
+
+.post-list a:hover {
+    text-decoration: underline;
+}
+
+.post-summary {
+    color: var(--secondary);
+    font-size: 0.95rem;
+}
+
+/* Project items */
+.project-item {
+    margin-bottom: 1.5rem;
+}
+
+/* This targets any <ul> that lives inside a .project-item */
+.project-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+.project-item li {
+  margin-bottom: 8px;
+}
+
+.project-item li a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    word-break: break-all; /* Prevents long URLs from breaking the layout on mobile */
+}
+
+.project-item li a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+.project-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.project-item h3 a {
+    text-decoration: none;
+}
+
+.project-item h3 a,
+.post-list a {
+    color: #0d9488; /* Deep Teal */
+    text-decoration: none;
+}
+
+.project-item h3 a:hover,
+.post-list a:hover {
+    color: #0f766e;
+    text-decoration: underline;
+}
+
+.project-item p {
+    margin: 0;
+    color: var(--secondary);
+
+}
+
+.project-item li strong {
+    color: var(--primary); /* Or your main text color */
+    font-weight: 600;
+}
+
+/* Publications */
+.publication {
+    margin-bottom: 1rem;
+}
+
+.publication a {
+    color: #B45309;/
+    text-decoration: none;
+}
+
+.publication a:hover {
+    color: #B45309;
+    text-decoration: underline;
+}
+
+.publication em {
+    font-style: italic;
+}
+
+.publication em a {
+    color: #0d9488; /* Deep Teal */
+    text-decoration: none;
+    font-style: italic;
+}
+
+.publication a:hover {
+    color: #0f766e;
+    text-decoration: underline;
+}
+
+/* Footer override - minimal */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+/* Hide default PaperMod elements we don't need */
+.main .home-info,
+.main .first-entry,
+.main .post-entry {
+    display: none;
+}
