@@ -1,18 +1,18 @@
 ---
-title: "Telegram Bottle Management System"
+title: "Bottle Storage & Customer Notification System"
 date: 2025-12-12
 ---
 
 [Link to Bot](http://t.me/rhbottlebot)
 
-A production-ready inventory management system built to track stored customer items through Telegram. The bot provides staff with an intuitive Telegram interface for managing item storage, retrieval, and expiration tracking, while automatically notifying customers through WhatsApp when their items are stored or ready for collection.
+A production inventory and notification system for tracking customer-stored items at bars. Staff manage storage, retrieval, and expiration through a Telegram interface, while customers receive automated WhatsApp messages when their items are stored or ready for collection.
 
-The system combines the convenience of Telegram's messaging platform for internal operations with WhatsApp Business API for customer-facing communications, backed by cloud-based spreadsheet storage for data persistence and accessibility.
+The system pairs internal staff operations with customer-facing communications via the WhatsApp Business API, backed by cloud-based spreadsheet storage for data persistence and accessibility.
 
 ## Technologies Used
 
 **Backend & Bot Framework:**
-- Python 3.11 with python-telegram-bot v20.7 for conversation-driven workflows
+- Python with python-telegram-bot for conversation-driven workflows
 - Flask + Waitress for webhook handling
 - Docker & Docker Compose for containerized deployment
 

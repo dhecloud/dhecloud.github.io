@@ -37,7 +37,7 @@ Lead developer for high-traffic organizational websites, focusing on security, p
 
 ## Technologies Used
 
-- WordPress (latest version)
+- WordPress
 - PHP, JavaScript, HTML5, CSS3
 - MySQL database optimization
 - Security plugins and hardening
