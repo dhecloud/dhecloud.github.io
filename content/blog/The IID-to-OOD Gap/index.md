@@ -6,48 +6,38 @@ tags: ["RAG", "evaluation", "OOD"]
 summary: "My in-distribution eval was an order of magnitude overestimate. Here's how I built the OOD generator that surfaced it and why I now distrust any eval that doesn't synthesize its own ugly inputs."
 ---
 
-For a few weeks I thought my RAG pipeline was answering multi-turn conversations at a respectable hit rate. Then I built an out-of-distribution test set and the number dropped by roughly an order of magnitude. On a system I would have happily shipped. Here's how I built the OOD generator that surfaced it, what the structural noise actually looked like, and why I now distrust any eval that doesn't synthesize its own ugly inputs.
+For a few weeks I thought my RAG pipeline was answering multi-turn conversations at a respectable hit rate. Then I built an out-of-distribution test set and the number dropped by roughly an order of magnitude. On a system I would have happily shipped.
 
 ## What "in-distribution" was buying me
 
-- Eval queries were sampled from the query-rewriter's own validation splits.
-- Clean, canonical phrasing. One topic per turn. No filler. No self-correction.
-- Multi-turn accuracy looked respectable. I assumed that was bad but representative.
+The eval queries were sampled from the query-rewriter's own validation splits: clean, canonical phrasing, one topic per turn, no filler, no self-correction. Multi-turn accuracy looked respectable, and I assumed that was bad but representative. It wasn't. I was measuring how well the model handled inputs that looked exactly like its training data, which is a very different thing from measuring whether it works.
 
 ## What a real user actually types
 
-- Rambling: two-clause queries that change subject mid-sentence.
-- Self-correction: "the package — no, the car — yesterday afternoon, around three."
-- Weak referents: "did it happen again."
-- Surface noise stacked on top: typos, abbreviations, broken punctuation.
-- I wrote 20 of these by hand and the assistant fell over on most of them. That was the moment I stopped trusting the IID number.
+Real queries are messier than anything in a clean validation set. Users ramble — two-clause queries that change subject mid-sentence. They self-correct mid-utterance: "the package — no, the car — yesterday afternoon, around three." They use weak referents: "did it happen again." And on top of that, there's surface noise: typos, abbreviations, broken punctuation stacked together in ways no curated dataset captures.
+
+I wrote 20 of these by hand and the assistant fell over on most of them. That was the moment I stopped trusting the IID number.
 
 ## The OOD generator
 
-- A teacher-LLM prompt that takes a clean query and applies one or more transformations: rambling, self-correction, conjoined topics, weak referents.
-- A second pass layers surface noise (typos, abbreviations, missing punctuation).
-- Multi-turn conversations stitched together with deliberate referent decay across turns.
-- The point isn't realism — it's *adversarial coverage*. If you can't handle the synthesized version, you definitely can't handle the real one.
+Rather than handwriting more examples, I built a generator using a teacher LLM. The prompt takes a clean query and applies one or more transformations: rambling, self-correction, conjoined topics, weak referents. A second pass layers surface noise — typos, abbreviations, missing punctuation. For multi-turn evaluation, conversations are stitched together with deliberate referent decay across turns, so the system has to track context that degrades naturally the way real conversations do.
 
-## The numbers (in ratios)
+The point isn't realism. It's adversarial coverage. If the pipeline can't handle the synthesized version, it definitely can't handle the real one.
 
-- Multi-turn accuracy on the OOD set was roughly **an order of magnitude worse** than on the IID set.
-- After OOD-targeted retraining of the slot rewriter, both numbers climbed, and OOD ended up *higher* than IID — a hint that the headroom wasn't where I'd assumed.
-- One detail worth flagging: the IID set was anchored on a single reference date, which masked a class of time-resolver bugs that only surface when each conversation has its own anchor. A per-conversation anchor override recovered another batch of "failures" that were actually eval-harness bugs.
+## The numbers
 
-## The stage-attribution judge
+Multi-turn accuracy on the OOD set was roughly an order of magnitude worse than on the IID set. After OOD-targeted retraining of the slot rewriter, both numbers climbed — and OOD accuracy ended up higher than IID, which was a hint that the headroom wasn't where I'd been looking. The IID set had been masking the real failure modes the whole time.
 
-- End-to-end accuracy alone can't diagnose a multi-stage pipeline.
-- A teacher-LLM judge reconstructs the conversation, walks the stages (rewrite, time, intent, retrieve, filter, respond), and emits `{stage, ok, reason}` plus `primary_failure_stage`.
-- Result: the *rewrite* stage owned the majority of failures. That's where I spent the next month.
-- Cost: cents per multi-hundred-turn run, with aggressive prompt caching. There is no excuse for not running this.
+One detail worth flagging: the IID set was anchored on a single reference date, which masked a class of time-resolver bugs that only surface when each conversation has its own anchor. A per-conversation anchor override recovered another batch of "failures" that turned out to be eval-harness bugs, not model bugs.
 
-## The rule I'd put on a poster
+## Stage-attribution
 
-*If your eval set was generated by the same distribution that trained your model, your eval is measuring whether the model overfit, not whether it works.*
+End-to-end accuracy alone can't tell you where a multi-stage pipeline is breaking. To diagnose failures, I built a stage-attribution judge: a teacher LLM that reconstructs the conversation, walks through each stage (rewrite, time resolution, intent, retrieval, filter, response), and emits a structured result with the stage, whether it passed, a reason, and a primary failure stage. Running this over the OOD failures made it clear that the rewrite stage owned the majority of them. That's where I spent the next month.
 
-Synthesize noise. Look at the failures. Bucket them. Generate training data targeted at the buckets. Repeat.
+The cost was cents per multi-hundred-turn run with aggressive prompt caching. There's no excuse for not running something like this.
 
 ## Close
 
-The IID/OOD gap is the post. Everything else in the system — the LoRAs, the retrieval, the digest cache — would have looked fine on the IID number and quietly broken in production. The eval was the load-bearing piece.
+If your eval set was generated by the same distribution that trained your model, your eval is measuring whether the model overfit, not whether it works. The IID number felt like signal. It was noise with good formatting.
+
+Synthesize noise. Look at the failures. Bucket them. Generate training data targeted at the buckets. Repeat. The pipeline looked fine on the IID number and would have quietly broken in production. The eval was the load-bearing piece the whole time.
