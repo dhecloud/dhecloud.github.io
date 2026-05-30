@@ -1,6 +1,8 @@
 ---
 title: "AI Invoice & Expense Claims Automation"
 date: 2026-05-01
+aliases:
+  - /freelance/telegram-invoice-claims-bot/
 ---
 
 A production document processing system deployed for Alpine United, an F&B operator, with a Telegram interface for staff to forward bills, delivery orders, and expense receipts. Both pipelines (supplier invoice ingestion and staff expense claims) send the images and PDFs to Claude, which extracts structured data via forced tool use, eliminating manual data entry across both workflows.

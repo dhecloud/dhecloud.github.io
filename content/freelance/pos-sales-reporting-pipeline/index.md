@@ -1,6 +1,8 @@
 ---
 title: "Automated POS Sales Reporting Pipeline"
 date: 2026-02-20
+aliases:
+  - /freelance/sales-reporting-bot/
 ---
 
 An automated sales reporting pipeline deployed for Alpine United, an F&B operator. The system scrapes live sales figures from multiple bar venues and delivers them to management via Telegram, eliminating manual POS checks during service hours.

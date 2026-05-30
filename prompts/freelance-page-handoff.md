@@ -6,7 +6,7 @@ Update this file when the freelance section's format changes (new sibling pages 
 
 ---
 
-You're drafting a public-facing "freelance project" page for the owner of this project, to be published on their personal Hugo site at dhecloud.xyz. It will live alongside existing siblings under `content/freelance/`: `telegram-bottle-system`, `enterprise-wordpress`, `product-launch-landing-page`, `sales-reporting-bot`, `telegram-invoice-claims-bot`. (Folder slugs may still mention "telegram"; the published titles do not. Lead with capability in the title, see style constraints below.)
+You're drafting a public-facing "freelance project" page for the owner of this project, to be published on their personal Hugo site at dhecloud.xyz. It will live alongside existing siblings under `content/freelance/`: `bottle-storage-notifications`, `enterprise-wordpress`, `product-launch-landing-page`, `pos-sales-reporting-pipeline`, `invoice-claims-automation`.
 
 ## Your deliverable
 
@@ -48,7 +48,7 @@ Body structure:
 
 ## Reference examples (all currently published, copy the closest shape)
 
-### Multi-channel operations system — `telegram-bottle-system/index.md`
+### Multi-channel operations system — `bottle-storage-notifications/index.md`
 ```
 ---
 title: "Bottle Storage & Customer Notification System"
@@ -98,7 +98,7 @@ The system pairs internal staff operations with customer-facing communications v
 - Conversation-based UI with inline keyboards for streamlined workflows
 ```
 
-### Scheduled automation pipeline — `sales-reporting-bot/index.md`
+### Scheduled automation pipeline — `pos-sales-reporting-pipeline/index.md`
 ```
 ---
 title: "Automated POS Sales Reporting Pipeline"

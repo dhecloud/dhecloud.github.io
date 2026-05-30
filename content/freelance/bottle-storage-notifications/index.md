@@ -1,6 +1,8 @@
 ---
 title: "Bottle Storage & Customer Notification System"
 date: 2025-12-12
+aliases:
+  - /freelance/telegram-bottle-system/
 ---
 
 [Link to Bot](http://t.me/rhbottlebot)
