@@ -12,3 +12,12 @@ Thumbs.db
 *.swo
 .idea/
 .vscode/
+
+# Pre-launch project pages.
+# `draft: true` only hides posts from the rendered Hugo site; the markdown
+# source is still readable in this public repo. Drafts that describe
+# unreleased work (architecture, UX direction, launch timing) constitute a
+# pre-announcement and must not be pushed. Delete the matching entry below
+# and commit on launch day, after re-anchoring the page on the public
+# announcement language.
+content/projects/on-device-video-qa/
