@@ -1,7 +1,7 @@
 ---
 title: "In praise of a lazy coding agent: Codex vs Claude Code"
 date: 2026-04-17
-draft: true
+draft: false
 tags: ["coding agents", "opinion", "developer tools"]
 summary: "An agent that writes just enough keeps you owning the project. An agent that writes everything quietly takes it from you."
 ---
