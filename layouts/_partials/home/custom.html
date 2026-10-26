@@ -1,0 +1,70 @@
+{{ $author := site.Language.Params.Author }}
+<article class="home">
+  <header class="home-intro">
+    {{ with $author.image }}
+      {{ with resources.Get . }}
+        {{ $img := .Fill "192x192 Center webp" }}
+        <img
+          class="home-avatar"
+          src="{{ $img.RelPermalink }}"
+          width="96"
+          height="96"
+          alt="{{ $author.name }}"
+        />
+      {{ end }}
+    {{ end }}
+    <div>
+      <h1 class="home-name">{{ $author.name | default site.Title }}</h1>
+      {{ with $author.headline }}
+        <p class="home-headline">{{ . | markdownify | emojify }}</p>
+      {{ end }}
+      <div class="home-links">{{ partialCached "author-links.html" . }}</div>
+    </div>
+  </header>
+
+  <section class="home-bio prose dark:prose-invert">{{ .Content | emojify }}</section>
+
+  {{ with first 3 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <section class="home-section">
+      <h2 class="home-label">Recent writing</h2>
+      <ul class="home-list">
+        {{ range . }}
+          <li>
+            <a class="home-item" href="{{ .RelPermalink }}">
+              <span class="home-item-title">{{ .LinkTitle | emojify }}</span>
+              <time class="home-item-meta" datetime="{{ .Date.Format "2006-01-02" }}">
+                {{- .Date | time.Format "Jan 2006" -}}
+              </time>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      {{ with site.GetPage "/blog" }}
+        <a class="home-more" href="{{ .RelPermalink }}">All writing &rarr;</a>
+      {{ end }}
+    </section>
+  {{ end }}
+
+  {{/* Pages opt in with `featured: <n>` in front matter; n sets the order. */}}
+  {{ $featured := sort (where site.RegularPages "Params.featured" "!=" nil) "Params.featured" }}
+  {{ with $featured }}
+    {{ $labels := dict "projects" "Project" "freelance" "Client work" "publications" "Paper" }}
+    <section class="home-section">
+      <h2 class="home-label">Selected work</h2>
+      <ul class="home-list">
+        {{ range . }}
+          <li>
+            <a class="home-item" href="{{ .RelPermalink }}">
+              <span class="home-item-title">{{ .LinkTitle | emojify }}</span>
+              <span class="home-item-meta">
+                {{- index $labels .Section | default (humanize .Section) -}}
+                {{- with .Params.venue }} · {{ . }}{{ end -}}
+              </span>
+              {{ with .Description }}<span class="home-item-desc">{{ . }}</span>{{ end }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+</article>

@@ -1,4 +1,5 @@
 ---
 title: "Freelance"
 ---
-some gigs i did
+
+Client work: automation pipelines, AI document processing, and websites.

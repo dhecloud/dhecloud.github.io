@@ -14,7 +14,7 @@
 [[main]]
   name = "projects"
   pageRef = "projects"
-  weight = 10
+  weight = 30
 
 [[main]]
   name = "blog"
@@ -24,19 +24,13 @@
 [[main]]
   name = "publications"
   pageRef = "publications"
-  weight = 30
+  weight = 10
 
 
 [[main]]
   name = "freelance"
   pageRef = "freelance"
   weight = 40
-
-[[main]]
-  identifier = "search"
-  weight = 99
-  [main.params]
-    action = "search"
 
 [[main]]
   identifier = "locale"

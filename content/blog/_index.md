@@ -1,4 +1,5 @@
 ---
 title: "Blog"
 ---
-some ramblings
+
+Writing on applied ML, research, and the things I build along the way.

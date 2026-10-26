@@ -1,6 +1,8 @@
 ---
 title: "AI Invoice & Expense Claims Automation"
 date: 2026-05-01
+description: "Telegram bot that reads supplier invoices and staff receipts with Claude, then files them to Drive and Sheets for an F&B operator."
+featured: 1
 aliases:
   - /freelance/telegram-invoice-claims-bot/
 ---

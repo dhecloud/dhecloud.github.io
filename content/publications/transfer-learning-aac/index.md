@@ -1,6 +1,9 @@
 ---
 title: "Automated Audio Captioning Using Transfer Learning and Reconstruction Latent Space Similarity Regularization"
 date: 2022-05-01
+linkTitle: "Audio Captioning with Transfer Learning and Latent Space Regularization"
+description: "Transfer learning plus a reconstruction latent space similarity regularizer for automated audio captioning."
+featured: 3
 authors: "A. Koh, X. Fuzhao, C. E. Siong"
 venue: "ICASSP 2022"
 ---

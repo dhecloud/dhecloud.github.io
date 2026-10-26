@@ -1,6 +1,8 @@
 ---
 title: "SakuraSensei: Japanese Conversational AI Tutor"
 date: 2025-12-01
+description: "Japanese tutor bot with persistent memory, RAG over JLPT and dictionary data, and cloze drills generated from YouTube audio."
+featured: 2
 ---
 
 [Read the full blog post about building SakuraSensei](/blog/004---building-sakurasensei-notes-from-a-japanese-learning-experiment/)

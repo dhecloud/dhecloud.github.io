@@ -1,6 +1,8 @@
 ---
 title: "Acoustic Event Detection for Emergency Telephony"
 date: 2023-12-02
+description: "Streaming PyTorch model that detects nine acoustic event classes in emergency call audio, with caption output and Docker deployment."
+featured: 4
 ---
 
 Streaming audio event-detection with custom PyTorch model. Nine acoustic classes, log-mel extraction, VAD, caption generation (SRT/XML/JSON), Dockerized deployment.
