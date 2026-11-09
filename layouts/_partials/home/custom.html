@@ -3,12 +3,12 @@
   <header class="home-intro">
     {{ with $author.image }}
       {{ with resources.Get . }}
-        {{ $img := .Fill "192x192 Center webp" }}
+        {{ $img := .Fill "256x256 Center webp" }}
         <img
           class="home-avatar"
           src="{{ $img.RelPermalink }}"
-          width="96"
-          height="96"
+          width="128"
+          height="128"
           alt="{{ $author.name }}"
         />
       {{ end }}

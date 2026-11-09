@@ -56,8 +56,8 @@ header nav ul {
 
 .home-avatar {
   flex: none;
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 9999px;
   object-fit: cover;
 }
