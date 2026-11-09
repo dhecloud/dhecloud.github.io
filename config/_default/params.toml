@@ -71,9 +71,6 @@ fingerprintAlgorithm = "sha256"
 [taxonomy]
   showTermCount = true
 
-[analytics.google]
-  id = "G-VZWZWMSWQQ"  # Replace with your actual Google Analytics 4 measurement ID
-
 [fathomAnalytics]
   # site = "ABC12345"
 
