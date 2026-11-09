@@ -309,3 +309,32 @@ header nav ul {
     grid-template-columns: 1fr;
   }
 }
+
+/* Mobile: keep the stacked menu at normal size, and tuck the avatar up beside
+   the links so the space under "Andrew Koh" is used. */
+@media (max-width: 639px) {
+  :root body > header {
+    padding-block: 1rem 0;
+  }
+
+  header nav ul li {
+    margin-bottom: 0.125rem;
+  }
+
+  .home {
+    margin-top: -4.25rem;
+    padding-top: 0;
+  }
+
+  .home-intro {
+    gap: 0.75rem;
+  }
+
+  .home-bio {
+    margin-top: 1.5rem;
+  }
+
+  .home-section {
+    margin-top: 2.5rem;
+  }
+}

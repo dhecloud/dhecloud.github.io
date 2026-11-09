@@ -15,7 +15,7 @@ title = "Andrew Koh"
 [params.Author]
   name = "Andrew Koh"
   image = "img/avatar.jpeg"
-  headline = "Algorithm Engineer · RAG and agentic systems · PhD, NTU Singapore"
+  headline = "Algorithm Engineer · PhD, NTU Singapore"
   # bio = "Ph.D. in Computer Science (NTU Singapore) and ML Researcher specializing in the intersection of audio and language. When I'm not training cross-modal models or exploring the latest in generative AI, I’m building end-to-end products and automation tools for businesses. I write here about the bridge between academic research and practical, applied engineering."
   links = [
     { email = "mailto:andrewkjj@gmail.com" },
