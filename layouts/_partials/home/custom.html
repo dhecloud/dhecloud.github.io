@@ -4,13 +4,35 @@
     {{ with $author.image }}
       {{ with resources.Get . }}
         {{ $img := .Fill "256x256 Center webp" }}
-        <img
-          class="home-avatar"
-          src="{{ $img.RelPermalink }}"
-          width="128"
-          height="128"
-          alt="{{ $author.name }}"
-        />
+        {{ $full := "" }}
+        {{ with resources.Get "img/avatar-full.jpg" }}
+          {{ $full = .Resize "1200x webp q85" }}
+        {{ end }}
+        {{ if $full }}
+          <button type="button" class="home-avatar-btn" aria-label="View full photo" data-photo-open>
+            <img
+              class="home-avatar"
+              src="{{ $img.RelPermalink }}"
+              width="128"
+              height="128"
+              alt="{{ $author.name }}"
+            />
+          </button>
+          <dialog class="photo-dialog" aria-label="Photo of {{ $author.name }}">
+            <form method="dialog">
+              <button class="photo-close" aria-label="Close">&times;</button>
+            </form>
+            <img
+              src="{{ $full.RelPermalink }}"
+              width="{{ $full.Width }}"
+              height="{{ $full.Height }}"
+              alt="{{ $author.name }}"
+              loading="lazy"
+            />
+          </dialog>
+        {{ else }}
+          <img class="home-avatar" src="{{ $img.RelPermalink }}" width="128" height="128" alt="{{ $author.name }}" />
+        {{ end }}
       {{ end }}
     {{ end }}
     <div>
@@ -68,3 +90,17 @@
     </section>
   {{ end }}
 </article>
+
+<script>
+  (function () {
+    var open = document.querySelector("[data-photo-open]");
+    var dlg = document.querySelector(".photo-dialog");
+    if (!open || !dlg || !dlg.showModal) return;
+    open.addEventListener("click", function () {
+      dlg.showModal();
+    });
+    dlg.addEventListener("click", function (e) {
+      if (e.target.tagName !== "BUTTON") dlg.close();
+    });
+  })();
+</script>

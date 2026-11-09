@@ -62,6 +62,60 @@ header nav ul {
   object-fit: cover;
 }
 
+.home-avatar-btn {
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  background: none;
+  cursor: zoom-in;
+}
+
+.home-avatar-btn:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 3px;
+}
+
+.photo-dialog {
+  max-width: min(92vw, 34rem);
+  max-height: 92vh;
+  padding: 0;
+  border: 0;
+  border-radius: 0.75rem;
+  background: transparent;
+  overflow: visible;
+}
+
+.photo-dialog::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+
+.photo-dialog img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  cursor: zoom-out;
+}
+
+.photo-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 9999px;
+  background: rgb(0 0 0 / 0.5);
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .home-name {
   margin: 0;
   font-size: 2.75rem;
