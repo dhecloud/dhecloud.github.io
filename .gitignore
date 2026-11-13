@@ -21,3 +21,8 @@ Thumbs.db
 # and commit on launch day, after re-anchoring the page on the public
 # announcement language.
 content/projects/on-device-video-qa/
+
+# Private working files (repo is public): agent prompts, writing guide, Claude Code config.
+prompts/
+.claude/
+devtools/
