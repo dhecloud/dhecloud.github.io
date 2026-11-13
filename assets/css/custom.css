@@ -338,3 +338,17 @@ header nav ul {
     margin-top: 2.5rem;
   }
 }
+
+/* Post footer author block: the theme pads each social icon with px-1, which
+   insets the first icon from the left-aligned name. Pull the row back. */
+footer .place-self-center > div:last-child > .flex-wrap {
+  margin-inline-start: -0.25rem;
+}
+
+/* Desktop: scale the whole rem-based layout (column width, prose width, text)
+   so the side margins shrink and the text grows together. */
+@media (min-width: 56rem) {
+  html {
+    font-size: 112.5%;
+  }
+}
