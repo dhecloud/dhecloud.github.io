@@ -1,7 +1,7 @@
 ---
 title: "The tip of the iceberg: evals in the age of self-improving loops"
 date: 2026-09-24
-draft: true
+draft: false
 tags: ["evals", "agents", "LLM-as-judge", "production"]
 summary: "Self-improving loops used to have a human reviewing the results. Now an automated score decides what is kept, and an eval is only a slice of everything a system could be asked, so user feedback has to stay in the loop."
 ---
