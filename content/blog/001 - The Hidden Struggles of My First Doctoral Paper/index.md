@@ -42,7 +42,7 @@ Very quickly, progress became less about “big ideas” and more about careful 
 
 ## The Core Idea, in Simple Terms
 
-At the time, there were two lines of research that I believed had potential: [Adapter layers](https://arxiv.org/abs/1902.00751) and more meaningful loss functions. With these in mind, I tried reframing the task as maximizing the similarity between intermediate text and audio embeddings using a small set of parameters. Additionally, because I was severely constrained by compute, I decided my research would have a "low-compute" angle.
+At the time, there were two lines of research that I believed had potential: adapter layers[^1] and more meaningful loss functions. With these in mind, I tried reframing the task as maximizing the similarity between intermediate text and audio embeddings using a small set of parameters. Additionally, because I was severely constrained by compute, I decided my research would have a "low-compute" angle.
 
 
 {{< figure src="gpu.png" class="align-center" caption="" alt="where?" >}}
@@ -96,3 +96,5 @@ More importantly, it shaped how I now think about ML systems: not just as archit
 This paper represents a snapshot of how I thought and felt about machine learning at that time. A frenzy of experimentations. A constant worry that my results would get superseded the very next week. Looking back, I am proud of the outcome and what i managed to achieve given my limited resources. Though I would have probably not given it a name as obscure as RLSSR.
 
 Up Next: Reflections from my next paper.
+
+[^1]: Houlsby et al., ["Parameter-Efficient Transfer Learning for NLP"](https://arxiv.org/abs/1902.00751), 2019.

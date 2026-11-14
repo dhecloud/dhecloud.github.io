@@ -27,7 +27,7 @@ The name Sakura was chosen for similar reasons. It is a common Japanese name, ea
 
 ## Laying the Technical Foundation
 
-For the language model, I chose Claude. At the time, Anthropic had built [a solid foundation around agent tooling](https://www.anthropic.com/engineering/building-effective-agents), which aligned well with LangChain. I also wanted to try Claude after hearing positive feedback about its reasoning quality. In practice, this decision paid off. LangChain felt surprisingly smooth. Instead of wrestling with model configurations, VRAM constraints, or output parsing, I was making straightforward API calls. Once credits were topped up, the system was mostly plug and play.
+For the language model, I chose Claude. At the time, Anthropic had built a solid foundation around agent tooling,[^1] which aligned well with LangChain. I also wanted to try Claude after hearing positive feedback about its reasoning quality. In practice, this decision paid off. LangChain felt surprisingly smooth. Instead of wrestling with model configurations, VRAM constraints, or output parsing, I was making straightforward API calls. Once credits were topped up, the system was mostly plug and play.
 
 {{< figure src="japmaterials.png" class="align-center" width="50%" alt="Japanese Learnign Materials" caption="While most of the materials were pretty easy, JaQuad was actually extremely difficulty and probably intended for native speakers.">}}
 
@@ -96,3 +96,5 @@ I do not believe AI should replace language teachers. At least not for now. Huma
 For now, SakuraSensei is complete. It achieved its primary goal: giving me hands on experience with LangChain and RAG while producing a functional Japanese learning tool. Turning it into a larger business would require marketing, which I do not have time for at the moment.
 
 I am writing this while the project is still fresh in my mind. Before it becomes just another repository, I wanted to capture the thinking, tradeoffs, and lessons that are not obvious from reading the code alone. Building educational AI is hard, especially when you are trying to make learning genuinely enjoyable. Execution matters far more than ideas, and even then, not everything lands the way you expect. Still, I had lots of fun building SakuraSensei.
+
+[^1]: Erik Schluntz and Barry Zhang, ["Building effective agents"](https://www.anthropic.com/engineering/building-effective-agents), Anthropic, December 2024.

@@ -113,9 +113,9 @@ The constraint was subtle. Scaffolding pushes the agent toward the route you des
 
 
 
-I was not the only one to find this. When the Claude Code team [audited their own system prompt](https://x.com/trq212/status/2080710971228918066), they removed over 80% of it for the newest models, with no measurable loss on their coding evaluations. Their explanation matches what I saw: rules written to avoid worst cases had piled up, and they clashed with each other and with what the user asked for. A rule that said to write no comments by default was wrong whenever a user wanted them. They replaced it with one line asking the model to match the surrounding code.
+I was not the only one to find this. When the Claude Code team audited their own system prompt, they removed over 80% of it for the newest models, with no measurable loss on their coding evaluations.[^1] Their explanation matches what I saw: rules written to avoid worst cases had piled up, and they clashed with each other and with what the user asked for. A rule that said to write no comments by default was wrong whenever a user wanted them. They replaced it with one line asking the model to match the surrounding code.
 
-Vercel hit the same wall with an internal text-to-SQL agent. They [replaced a stack of specialized tools with a file system and bash](https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools). On a five-query benchmark, the success rate went from 80% to 100% and the average run time fell from 275 seconds to 77. Their explanation was blunt: they had been doing the model's thinking for it. They also note it worked because their semantic layer was already good documentation, so the lesson comes with a condition. Their advice was to "build for the model that you'll have in six months, not for the one that you have today."
+Vercel hit the same wall with an internal text-to-SQL agent. They replaced a stack of specialized tools with a file system and bash.[^2] On a five-query benchmark, the success rate went from 80% to 100% and the average run time fell from 275 seconds to 77. Their explanation was blunt: they had been doing the model's thinking for it. They also note it worked because their semantic layer was already good documentation, so the lesson comes with a condition. Their advice was to "build for the model that you'll have in six months, not for the one that you have today."
 
 Swapping in a newer model is not a simple unplug and replace either. Everything I had tuned, the prompts, the rules, the fixes, was shaped around how the old model behaved: its habits, its mistakes, what it needed spelled out. A smarter model does not inherit that fit. It may not need instructions the old one did, or read the same hint differently, or fail in new places where the old tuning was quietly holding things up. Some of the tuning became dead weight, and some of it started to work against the new model's strengths.
 
@@ -149,3 +149,6 @@ Swapping in a newer model is not a simple unplug and replace either. Everything 
 A harness knows better than the model only for as long as the model is weak. When the model catches up, the harness is the last to find out, because nobody tells it. Models behave differently from one version to the next, so the harness is the software you actually have to maintain.
 
 If you are building on a model today, assume some of what you add will go stale. That is fine. The cost comes from not knowing which parts, so leave yourself a way to find out.
+
+[^1]: [@trq212, post on X](https://x.com/trq212/status/2080710971228918066).
+[^2]: Andrew Qu, ["We removed 80% of our agent's tools"](https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools), Vercel, December 2025.

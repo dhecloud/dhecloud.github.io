@@ -18,9 +18,9 @@ Mentally, I was anxious. Not about the work itself, but about relevance. I was w
 {{< figure src="MLM.png" class="align-center" width="70%" alt="Masked Language Modeling" caption="[source](https://sbert.net/examples/sentence_transformer/unsupervised_learning/MLM/README.html). Masked Language Modeling. Close questions, language model style">}}
 
 
-This paper came from a mix of excitement and pressure. Pretraining tasks were all the rage back then. Masked language modelling, next sentence prediction ([BERT](https://arxiv.org/abs/1810.04805)), and similar objectives seems to be the trend. To me, many of these felt almost like primary school homework exercises. Useful, yes, but still largely classification tasks. I was more interested in whether these simple ideas could be adapted to open-ended sequence generation.
+This paper came from a mix of excitement and pressure. Pretraining tasks were all the rage back then. Masked language modelling, next sentence prediction (BERT[^1]), and similar objectives seems to be the trend. To me, many of these felt almost like primary school homework exercises. Useful, yes, but still largely classification tasks. I was more interested in whether these simple ideas could be adapted to open-ended sequence generation.
 
-Then OpenAI released a [paper](https://openai.com/index/formal-math/) on chaining non-trivial reasoning steps for math. That was the spark. The idea that *how* you present data during training could matter just as much as the architecture itself stuck with me, and that became the seed for this paper. [Chain of thought reasoning](https://arxiv.org/abs/2201.11903), as of writing, became the de facto standard for eliciting complex reasoning from large language models. 
+Then OpenAI released a paper[^2] on chaining non-trivial reasoning steps for math. That was the spark. The idea that *how* you present data during training could matter just as much as the architecture itself stuck with me, and that became the seed for this paper. Chain of thought reasoning[^3], as of writing, became the de facto standard for eliciting complex reasoning from large language models. 
 
 ---
 
@@ -66,3 +66,7 @@ I published this paper in APSIPA2023. This was my first conference post lockdown
 
 
 Given where I was in my PhD and what I knew then, most of the decisions I made were reasonable. The paper’s relative simplicity, and the fact that it came together more smoothly than others, makes it stand out in my memory. Not because it was the most sophisticated work I did, but because it taught me how research can sometimes flow, and how rare that feeling actually is.
+
+[^1]: Devlin et al., ["BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"](https://arxiv.org/abs/1810.04805), 2018.
+[^2]: Stanislas Polu, Jesse Michael Han and Ilya Sutskever, ["Solving (some) formal math olympiad problems"](https://openai.com/index/formal-math/), OpenAI, February 2022.
+[^3]: Wei et al., ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903), 2022.

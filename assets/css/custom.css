@@ -345,6 +345,35 @@ footer .place-self-center > div:last-child > .flex-wrap {
   margin-inline-start: -0.25rem;
 }
 
+/* Footnotes: smaller and muted so the source list reads as a reference block,
+   not as more of the post. */
+.footnotes {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-top: 2rem;
+}
+.footnotes ol {
+  padding-inline-start: 1.25rem;
+}
+.footnotes li {
+  margin: 0;
+}
+.footnotes li p {
+  margin: 0.1rem 0;
+}
+
+/* Footnote markers: the theme's light-mode link colour is thin at superscript
+   size. Use a clearer blue, bold and slightly larger, in light mode only. */
+html:not(.dark) sup[id^="fnref"] {
+  font-size: 0.85em;
+}
+html:not(.dark) sup[id^="fnref"] a,
+html:not(.dark) sup.footnote-ref a {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
 /* Desktop: scale the whole rem-based layout (column width, prose width, text)
    so the side margins shrink and the text grows together. */
 @media (min-width: 56rem) {

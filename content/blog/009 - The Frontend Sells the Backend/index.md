@@ -35,7 +35,7 @@ I do not want to overstate this. A polished interface on top of wrong answers fa
 
 The place where this matters most for AI systems is latency. An assistant that retrieves, calls tools and then writes an answer can take a long time to reply. Depending on the query, mine takes from 13 seconds to 10 minutes.
 
-I could not remove that time without changing the backend, so I looked at how people experience waiting. The article that started this for me is [Beyond the Wait](https://uxpsychology.substack.com/p/beyond-the-wait-enhancing-user-experience), a summary of research on loading times by a UX psychologist. Three points from it changed how I built the screen:
+I could not remove that time without changing the backend, so I looked at how people experience waiting. The article that started this for me is "Beyond the Wait", a summary of research on loading times by a UX psychologist.[^1] Three points from it changed how I built the screen:
 
 - **Attention.** When people are occupied with something, they monitor the clock less, and the wait feels shorter. The article cites an attention-gate model from Block and Zakay (1996) for this.
 - **Passive animation can backfire.** It cites a study (Zhao and colleagues, 2017) where a passive animated loading screen increased perceived wait time compared to a blank screen. A spinner that only spins is a passive animation.
@@ -82,3 +82,5 @@ The same caution applies as in the article. Notes that scroll past too fast, or 
 None of this fixes a slow system. A reply that takes too long is a backend problem, and a good loading experience should not be the reason to stop working on it. Polish also costs time, and I still think a backend engineer's first hour is better spent on the backend.
 
 If I had to give one practical suggestion, it would be to watch someone use your demo without explaining anything, and note what they react to. For me it was a chart and a wait, and neither was in the part of the system I had spent the most time on.
+
+[^1]: Maria Panagiotidi, ["Beyond the Wait: Enhancing User Experience Through Psychological Insights"](https://uxpsychology.substack.com/p/beyond-the-wait-enhancing-user-experience), UX Psychology, March 2024.
