@@ -33,6 +33,15 @@
   weight = 40
 
 [[main]]
+  name = "search"
+  url = "#search"
+  title = "Search (press /)"
+  weight = 50
+  [main.params]
+    icon = "search"
+    showName = false
+
+[[main]]
   identifier = "locale"
   weight = 100
   [main.params]

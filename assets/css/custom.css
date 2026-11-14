@@ -21,7 +21,29 @@ h1.font-extrabold {
 }
 
 header nav ul {
-  font-weight: 500;
+  font-weight: 400;
+}
+
+/* Quiet links: muted until hovered, the current section stays full strength. */
+header nav ul a {
+  color: rgb(var(--color-neutral-500));
+  transition: color 0.15s;
+}
+
+header nav ul a:hover,
+header nav ul a:focus-visible,
+header nav ul a[aria-current="page"] {
+  color: rgb(var(--color-neutral-900));
+}
+
+.dark header nav ul a {
+  color: rgb(var(--color-neutral-400));
+}
+
+.dark header nav ul a:hover,
+.dark header nav ul a:focus-visible,
+.dark header nav ul a[aria-current="page"] {
+  color: rgb(var(--color-neutral-50));
 }
 
 /* One centred column for header, content and footer. `:root` outranks the
@@ -310,19 +332,33 @@ header nav ul {
   }
 }
 
-/* Mobile: keep the stacked menu at normal size, and tuck the avatar up beside
-   the links so the space under "Andrew Koh" is used. */
+/* Mobile: one horizontal row of links, spread across the column (as on
+   Lil'Log), instead of a stacked menu. */
 @media (max-width: 639px) {
   :root body > header {
-    padding-block: 1rem 0;
+    padding-block: 1rem 1.25rem;
   }
 
-  header nav ul li {
-    margin-bottom: 0.125rem;
+  header nav {
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+    font-size: 0.8125rem;
+  }
+
+  :root header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline-start: auto;
+    gap: 0.25rem 0.875rem;
+  }
+
+  :root header nav ul li {
+    margin-bottom: 0;
   }
 
   .home {
-    margin-top: -4.25rem;
     padding-top: 0;
   }
 
@@ -379,5 +415,262 @@ html:not(.dark) sup.footnote-ref a {
 @media (min-width: 56rem) {
   html {
     font-size: 112.5%;
+  }
+}
+
+/* Tag chips: quiet metadata. Low saturation, tinted fill, no border, so the
+   hue is a hint rather than a signal. Text stays above 4.5:1 contrast. */
+.tag-chip {
+  color: hsl(var(--tag-hue) 20% 36%);
+  background: hsl(var(--tag-hue) 30% 95%);
+  border-color: transparent;
+}
+
+.tag-chip:hover {
+  color: hsl(var(--tag-hue) 35% 26%);
+  background: hsl(var(--tag-hue) 35% 90%);
+}
+
+html.dark .tag-chip {
+  color: hsl(var(--tag-hue) 25% 76%);
+  background: hsl(var(--tag-hue) 12% 20%);
+}
+
+html.dark .tag-chip:hover {
+  color: hsl(var(--tag-hue) 40% 86%);
+  background: hsl(var(--tag-hue) 16% 27%);
+}
+
+/* In article lists, tags stay hidden until the row is hovered or focused.
+   Opacity (not display) keeps their space, so nothing shifts on reveal.
+   Touch screens have no hover, so list tags are dropped there; they still
+   show on the post page and the tag pages. */
+@media (hover: none) {
+  .tag-reveal {
+    display: none;
+  }
+}
+
+@media (hover: hover) {
+  .tag-reveal {
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+
+  article:hover .tag-reveal,
+  article:focus-within .tag-reveal {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tag-reveal {
+    transition: none;
+  }
+}
+
+/* Site search dialog. */
+.search-dialog {
+  width: min(36rem, calc(100vw - 2rem));
+  margin: 12vh auto auto;
+  padding: 0.75rem;
+  border: 1px solid rgb(var(--color-neutral-200));
+  border-radius: 0.75rem;
+  background: rgb(var(--color-neutral));
+  color: rgb(var(--color-neutral-800));
+  box-shadow: 0 20px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.search-dialog::backdrop {
+  background: rgb(0 0 0 / 0.35);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid rgb(var(--color-neutral-300));
+  border-radius: 0.5rem;
+  background: transparent;
+  color: inherit;
+}
+
+.search-input:focus {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 1px;
+}
+
+.search-status {
+  min-height: 1.25rem;
+  margin: 0.375rem 0.25rem 0;
+  font-size: 0.75rem;
+  color: rgb(var(--color-neutral-500));
+}
+
+.search-results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-hit {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+  padding: 0.625rem 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.search-hit:hover,
+.search-hit:focus-visible {
+  background: rgb(var(--color-neutral-100));
+}
+
+.search-hit-title {
+  font-weight: 500;
+}
+
+.search-hit-meta {
+  font-size: 0.75rem;
+  color: rgb(var(--color-neutral-500));
+}
+
+.search-hit-snippet {
+  grid-column: 1 / -1;
+  margin-top: 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgb(var(--color-neutral-600));
+}
+
+.search-empty {
+  padding: 0.625rem 0.5rem;
+  font-size: 0.875rem;
+  color: rgb(var(--color-neutral-500));
+}
+
+.dark .search-dialog {
+  border-color: rgb(var(--color-neutral-700));
+  background: rgb(var(--color-neutral-800));
+  color: rgb(var(--color-neutral-200));
+}
+
+.dark .search-input {
+  border-color: rgb(var(--color-neutral-600));
+}
+
+.dark .search-hit:hover,
+.dark .search-hit:focus-visible {
+  background: rgb(var(--color-neutral-700));
+}
+
+.dark .search-hit-snippet {
+  color: rgb(var(--color-neutral-400));
+}
+
+/* Current section in the header. */
+header nav ul a[aria-current="page"] span {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+  text-decoration-color: rgb(var(--color-primary-500));
+}
+
+/* Mobile pass: slightly smaller type, a bit more line width, safe overflow,
+   and finger-sized header links. 15px root scales every rem-based size. */
+@media (max-width: 639px) {
+  html {
+    font-size: 15px;
+  }
+
+  :root body {
+    padding-inline: 1.25rem;
+  }
+
+  /* Header: one row. "Home" left, links right; the current page is left
+     out of the menu, so the row stays short. */
+  :root header nav {
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
+
+  :root header nav ul {
+    margin-inline-start: auto;
+    flex-wrap: nowrap;
+    gap: 0.25rem 0.75rem;
+  }
+
+  header nav ul a {
+    display: inline-block;
+    padding-block: 0.375rem;
+  }
+
+  /* Titles and body. */
+  article h1,
+  main h1 {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  .home-name {
+    font-size: 2rem;
+  }
+
+  .prose {
+    line-height: 1.65;
+  }
+
+  .prose h2 {
+    font-size: 1.375rem;
+  }
+
+  .prose h3 {
+    font-size: 1.15rem;
+  }
+
+  /* List pages: smaller item titles, long words may break. */
+  article h3,
+  article h2 {
+    overflow-wrap: break-word;
+  }
+
+  main section article h3 {
+    font-size: 1.05rem;
+  }
+
+  /* Never let wide content push the page sideways. */
+  .prose img,
+  .prose video,
+  .prose iframe,
+  .prose figure {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prose pre,
+  .prose table {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .prose table {
+    display: block;
+  }
+
+  .prose a,
+  .prose p,
+  .prose li {
+    overflow-wrap: break-word;
+  }
+
+  /* Search dialog: 16px input stops iOS zooming in on focus. */
+  .search-dialog {
+    margin-top: 4vh;
+  }
+
+  .search-input {
+    font-size: 16px;
   }
 }

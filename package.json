@@ -1,0 +1,11 @@
+{
+  "name": "dhecloud-xyz",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "embed": "node scripts/build-embeddings.mjs"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "4.3.2"
+  }
+}

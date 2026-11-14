@@ -3,6 +3,9 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Node (search embeddings build)
+node_modules/
+
 # OS
 .DS_Store
 Thumbs.db
@@ -26,3 +29,4 @@ content/projects/on-device-video-qa/
 prompts/
 .claude/
 devtools/
+static/search-embeddings.json

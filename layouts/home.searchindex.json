@@ -1,0 +1,15 @@
+{{- /* Slim index for the site search: regular content pages only (drafts are
+       already excluded by Hugo in production builds). */ -}}
+{{- $index := slice -}}
+{{- range where site.RegularPages "Type" "in" (slice "blog" "projects" "freelance" "publications") -}}
+  {{- $index = $index | append (dict
+    "title" (.LinkTitle | emojify)
+    "section" .Section
+    "tags" (.Params.tags | default slice)
+    "summary" (.Description | default .Params.summary | default "")
+    "content" .Plain
+    "url" .RelPermalink
+    "date" (.Date.Format "2006-01-02")
+  ) -}}
+{{- end -}}
+{{- $index | jsonify -}}

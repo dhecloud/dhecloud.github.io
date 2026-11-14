@@ -1,3 +1,31 @@
+<dialog id="site-search" class="search-dialog" aria-label="Search the site">
+  <form method="dialog" class="search-form">
+    <input
+      class="search-input"
+      type="search"
+      placeholder="Search, e.g. “speech models” or “RAG”"
+      aria-label="Search"
+      autocomplete="off"
+      spellcheck="false"
+    />
+  </form>
+  <p class="search-status" role="status" aria-live="polite"></p>
+  <ul class="search-results"></ul>
+</dialog>
+<script type="module" src="/js/search.js"></script>
+<script>
+  // Underline the header link for the section you are in.
+  (function () {
+    var path = location.pathname;
+    document.querySelectorAll("header nav ul a").forEach(function (a) {
+      var href = a.getAttribute("href") || "";
+      if (href.charAt(0) === "#") return;
+      var p = new URL(a.href, location.href).pathname;
+      if (p !== "/" && path.indexOf(p) === 0) a.setAttribute("aria-current", "page");
+    });
+  })();
+</script>
+
 {{ if and .IsPage (eq .Type "blog") }}
   <div class="reading-progress" aria-hidden="true"></div>
 {{ end }}
